@@ -1,0 +1,220 @@
+*, *::before, *::after{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --headfoot-bg:#3A1078;
+    --main-bg:#4E31AA;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@media screen and (width <= 700px) {
+    body {
+        background-color: var(--main-bg);
+        min-height: 100vh;
+
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto 1fr auto;
+    }
+
+.logo {
+ 
+}
+.logo-resize {
+    width: 15rem;
+    height: 14rem;
+
+}
+
+header {
+   padding: 1rem;
+    background-color: var(--headfoot-bg);
+    display: flex;
+    justify-content: flex-end;
+}
+.logo {
+  
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+nav {
+ 
+}
+
+.hamburger-menu {
+    z-index: 999;
+    height: 5em;
+    cursor: pointer;
+    width: 5em;
+    position: relative;
+    margin-top: 4rem;
+}
+.ham-bar {
+    width: 70%;
+    height: 0.4em;
+    background-color: white;
+    border-radius: 2.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    transition: transform .6s, opacity .8s, top .6s;
+}
+
+
+.bar-top {
+    top: 25%;
+}
+.bar-bottom {
+    top: 75%;
+}
+.hamburger-menu.active .bar-top {
+    transform: translate(-50%, -50%) rotate(-315deg);
+    top: 50%;
+}
+
+.hamburger-menu.active .bar-mid {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar-bottom {
+    transform: translate(-50%, -50%) rotate(-225deg);
+    top: 50%;
+}
+
+
+.off-screen-menu {
+    position: fixed;
+    top: 0;
+    right: -75%;
+    background-color: rgb(62, 17, 125);
+    color: white;
+    height: 100vh;
+    width: 75%;
+    transition: right .5s;
+  
+animation: opa 250ms ease;
+}
+
+.off-screen-menu ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    height: 70%;
+}
+.off-screen-menu li a {
+    font-size: 2rem;
+    color: inherit;
+   
+}
+
+.off-screen-menu a {
+    text-decoration: none;
+    
+}
+
+
+@keyframes opa {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+.off-screen-menu.active {
+    right: 0;
+    width: 100%;
+    
+    
+} 
+
+
+/* Main */
+main {
+    display: grid;
+
+}
+.section-one, .section-two, .section-three {
+    outline: 2px dashed red;
+}
+
+/*slider*/
+
+.section-slider {
+    width:100%;
+    height: 100%;
+    outline: 1px dashed red;
+    overflow: hidden;
+    
+}
+
+
+.section-slider .slides {
+    display: flex;
+    flex-direction: row;
+    width: 300%;
+    height: 25em;
+    outline: 1px dashed yellow;
+    animation: slide 10s ease-in infinite;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.slide, .slide-background1, .slide-background2, .slide-background3 {
+    width: 100%;
+    height: 100%;
+}
+
+/* .slide-background1 {
+    background-image: url(/img/9.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slide-background2 {
+    background-image: url(/img/abstract-purple-pink-digital-art-uhdpaper.com-4K-4.299.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slide-background3 {
+    background-image: url(/img/backiee-210545.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ */
+@keyframes slide {
+    0% {margin-left: 0;}
+
+    21% {margin-left: 0;}
+    25% {margin-left: -100%;}
+
+    46% {margin-left: -100%;}
+    50% {margin-left: -200%;}
+ 
+    75% {margin-left: -300%;}
+    
+    100% {margin-left: 0;}
+}
+/*slider*/
+
+
+
+
+/* Main */
+}
