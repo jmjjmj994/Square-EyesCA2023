@@ -1,226 +1,4 @@
-*, *::before, *::after{
-margin: 0%;
-padding: 0%;
-box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
-}
-
-:root {
-    --headfoot-bg:#3A1078;
-    --main-bg:#4E31AA;
-}
-
-html {
-    font-size: 62.5%;
-}
-
-
-
-
-
-
-    body {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 20em 1fr auto;
-        min-height: 100vh;
-    }
-
-    .movie-card-1, .movie-card-2 {
-        display: none;
-    }
-
-  
-@media screen and (width >= 600px) {
-
-    header {
-    
-        background-color: var(--headfoot-bg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-         background-image: url(/img/SquareEyes-logos_white.png);
-         background-position: left;
-         background-size: contain;
-         background-repeat: no-repeat;
-    }
-    
-    nav {
-        
-    }
-    
-    nav ul {
-        
-      list-style-type: none;
-        display: flex;
-     margin-left: 5%;
-        flex-wrap: nowrap;
-        width: 100%;
-    }
-    
-    li a {
-        font-size: clamp(1rem, 2.5vw, 2rem);
-      padding: 1rem;
-        color: white;
-        text-decoration: none;
-        padding: 5rem;
-    }
-
-
-
-
-.movie-wrapper__grid {
-    display: none;
-}
-
-
-.movie-wrapper__grid-large {
-    margin-top: 5rem;
-display: grid;
-grid-template-columns: minmax(50%, 100%);
-grid-template-rows: repeat(2, 50rem);
-gap: 3rem;
-}
-
-.movie-card_large_one {
-    background-color: rgb(28, 199, 122);
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-}
-
-.movie-column_left__img {
-    outline: 1px dashed red;
-    background-image: url(/img/ohdq95vuq5la1.webp);
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.movie-column_right {
-outline: 1px dashed blue;
-position: relative;
-}
-
-
-
-.movie-column_right-info {
-    background-color: black;
-    border-bottom-right-radius: 50%;
-    height:25%;
-    position: absolute;
-    width: 15%;
-    transition: 1s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    transition: all .5s ease-in-out;
-
-    
-}
-.header-large {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-   
-    height: 20rem;
-    color: white;
-   
-   
-}
-
-.header-large-prim {
-    display: block;
-    letter-spacing: 1rem;
-    font-size:2rem;
-    font-weight: 900;
-    margin: 5rem;
-    opacity: 0;
-    transition: 3s;
-    
-}
-.header-large-sub {
-    padding: 3rem;
-    display: block;
-    letter-spacing: 0.2rem;
-    font-size: 1.5rem;
-    opacity: 0;
-    transition: 2s;
-    animation: fadeIn 1.5s;
-}
-.movie-card_large_one:hover .movie-column_right-info {
-border-bottom-right-radius: 0;
-height: 100%;
-width: 100%;
-opacity: 1; 
-}
-
-.movie-card_large_one:hover .header-large-prim {
-    opacity: 1;
-}
-
-.movie-card_large_one:hover .header-large-sub {
-    opacity: 1;
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.movie-card_large_two {
-background-color: blue;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (width <= 600px) {
-    .movie-wrapper__grid-large {
-        display: none;
-    }
     body {
         background-color: var(--main-bg);
         min-height: 100vh;
@@ -233,11 +11,14 @@ background-color: blue;
 
     }
 
+.logo {
+ 
+}
+.logo-resize {
+    width: 15rem;
+    height: 14rem;
 
-    .movie-column-right {
-        display: none;
-    }
-
+}
 
 header {
    padding: 3em;
@@ -251,7 +32,13 @@ header {
     background-repeat: no-repeat;
    
 }
-
+.logo {
+  
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+}
 nav {
  
 }
